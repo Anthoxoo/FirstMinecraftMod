@@ -1,10 +1,12 @@
 package net.anthox.testmod.block;
 
 import net.anthox.testmod.Testmod;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -33,6 +35,12 @@ public class ModBlocks {
     }
     public static void registerModBlock() {
         Testmod.LOGGER.info("Registering mod blocks for : " + Testmod.MOD_ID);
+
+
+        //Add the block to the building blocks tab
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(PINK_GARNET_BLOCK);
+        });
     }
 
 }
