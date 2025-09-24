@@ -22,6 +22,9 @@ public class ModBlocks {
     new Block(AbstractBlock.Settings.create().strength(4f).
             requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
+    public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("pink_garnet_ore",
+            new Block(AbstractBlock.Settings.create().strength(3f).
+                    requiresTool().sounds(BlockSoundGroup.STONE)));
 
 
     //Registries methods
@@ -41,6 +44,10 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(PINK_GARNET_BLOCK);
         });
-    }
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(RAW_PINK_GARNET_BLOCK);
+        });
+        }
+
 
 }
