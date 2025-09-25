@@ -1,5 +1,6 @@
 package net.anthox.testmod;
 
+import net.anthox.testmod.item.ModItemGroups;
 import net.anthox.testmod.item.ModItems;
 import net.anthox.testmod.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
@@ -13,6 +14,7 @@ public class Testmod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlock();
 	}
