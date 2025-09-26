@@ -28,6 +28,9 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(3f).
                     requiresTool().sounds(BlockSoundGroup.STONE)));
 
+    //ExperienceDroppingBlock is so we can have experience when mining the ore
+    //UniformIntProvider is so we can have a random amount of experience between the two values
+
     public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
                     AbstractBlock.Settings.create().strength(3f).requiresTool()));

@@ -26,12 +26,12 @@ public class ModItems {
 
     public static void registerModItems() {
         Testmod.LOGGER.info("Registering ModItems for " + Testmod.MOD_ID);
-        //Items that are in the ingredients tab while being an item
+        //Items that are in the ingredients tab
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PINK_GARNET);
             entries.add(RAW_PINK_GARNET);
         });
-        //Items that are in the food and drink tab while being an item
+        //Items that are in the food and drink tab
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.add(SERRANO);
         });
